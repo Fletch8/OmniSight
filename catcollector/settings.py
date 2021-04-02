@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'catcollector.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cats111',
+        'NAME': 'omni_sight',
     }
 }
 
@@ -120,6 +120,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL='/cats/'
+LOGIN_REDIRECT_URL='/index/'
 
 LOGOUT_REDIRECT_URL='/'
