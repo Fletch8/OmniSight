@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 from django.forms.models import model_to_dict
 
 # import models
-# from .models import Cat
+from .models import Currency
 # access the FeedingForm
 # from .forms import FeedingForm, CatForm
 
@@ -43,7 +43,8 @@ from django.forms.models import model_to_dict
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    currencies = Currency.objects.values()
+    return render(request, 'index.html', {"currencies": currencies})
 
 def about(request):
     return render(request, 'about.html')

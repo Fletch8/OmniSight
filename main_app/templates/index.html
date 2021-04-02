@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Welcome to Cat Collector</h1>
+    <h1>Welcome to Omni Sight</h1>
+    <hr/>
+    {% for curr in currencies %}
+        <p>Symbol: {{ curr.symbol }}</p>
+        <p>Price: ${{ curr.price}}</p> 
+        <button class="btn" >Add to Favorites</button>     
+        <hr/>
+    {% endfor %}
 {% endblock %}
