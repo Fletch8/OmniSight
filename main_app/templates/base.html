@@ -18,14 +18,12 @@
     <nav>
       <div class="nav-wrapper">  
         <ul>
-          <li><a href="/cats/" class="left brand-logo ">&nbsp;&nbsp;Omni Sight</a></li>
+          <li><a href="/about/" class="left brand-logo ">&nbsp;&nbsp;Omni Sight</a></li>
         </ul>
         <a href='#' class='right sidenav-trigger' data-target="mobile-demo"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="{% url 'about' %}">About</a></li>
           {% if user.is_authenticated %}
-            <li><a href="{% url 'cats_create' %}">Add a Cat</a></li>
-            <li><a href="{% url 'cats' %}">View All My Cats</a></li>
             <li><a href="{% url 'logout' %}">Log out</a></li>
           {% else %}
             <li><a href="{% url 'login' %}">Log in</a></li>
@@ -38,8 +36,7 @@
   <ul class="sidenav" id="mobile-demo">
     <li><a href="{% url 'about' %}">About</a></li>
     {% if user.is_authenticated %}
-    <li><a href="{% url 'cats_create' %}">Add a Cat</a></li>
-    <li><a href="{% url 'cats' %}">View All My Cats</a></li>
+    
     <li><a href="{% url 'logout' %}">Log out</a></li>
     {% else %}
     <li><a href="{% url 'login' %}">Log in</a></li>
