@@ -5,8 +5,10 @@
     <hr/>
     {% for curr in currencies %}
         <p>Symbol: {{ curr.symbol }}</p>
-        <p>Price: ${{ curr.price}}</p> 
+        <p>Price: ${{ curr.price}}</p>
+        {% if user.is_authenticated %} 
         <button class="btn" >Add to Favorites</button>     
+        {% endif %}
         <hr/>
     {% endfor %}
 {% endblock %}

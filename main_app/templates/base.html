@@ -23,10 +23,11 @@
         <a href='#' class='right sidenav-trigger' data-target="mobile-demo"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'index'%}">Currencies</a></li>
           {% if user.is_authenticated %}
-            <li><a href="{% url 'omni_dashboard' %}"></a>Omni-Dashboard</li>
+            <li><a href="{% url 'omni_dashboard' %}">Omni-Dashboard</a></li>
             <li><a href="{% url 'logout' %}">Log out</a></li>
-          {% else %}
+          {% else %}            
             <li><a href="{% url 'login' %}">Log in</a></li>
             <li><a href="{% url 'sign_up' %}">Sign up</a></li>
           {% endif %}
@@ -36,8 +37,9 @@
   </header>  
   <ul class="sidenav" id="mobile-demo">
     <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'index'%}">Currencies</a></li>
     {% if user.is_authenticated %}
-    <li><a href="{% url 'omni_dashboard'%}"></a>Omni-Dashboard</li>
+    <li><a href="{% url 'omni_dashboard'%}">Omni-Dashboard</a></li>
     <li><a href="{% url 'logout' %}">Log out</a></li>
     {% else %}
     <li><a href="{% url 'login' %}">Log in</a></li>

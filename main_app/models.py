@@ -52,4 +52,5 @@ class FavCurrencies(models.Model):
     symbol = models.CharField(max_length=12)
     alert_price = models.FloatField()
 
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     # currency = models.ForeignKey(Currency, on_delete=models.CASCADE)
