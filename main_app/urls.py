@@ -12,5 +12,6 @@ urlpatterns = [
     # path('cats/<int:pk>/delete/', views.CatDelete.as_view(), name='cats_delete'),
     # path('cats/<int:pk>/add_feeding/', views.add_feeding, name='add_feeding'),
     path('accounts/signup', views.sign_up, name='sign_up'),
+    path('omni-dashboard/', views.dashboard, name='omni_dashboard')
 
 ]

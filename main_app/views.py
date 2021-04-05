@@ -142,6 +142,8 @@ def sign_up(request):
     'error_message': error_message
   })
 
+def dashboard(request):
+  return render(request, 'omni-dashboard.html')
 
 
 # Instrcutions
