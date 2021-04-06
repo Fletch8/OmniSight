@@ -36,9 +36,9 @@ from .forms import FavCurrenciesForm
 #     return HttpResponseRedirect('/' + str(self.object.pk))
 
 
-# class FavCurrenciesDelete(DeleteView):
-#   model = FavCurrencies
-#   success_url = '/'
+class FavCurrenciesDelete(DeleteView):
+  model = FavCurrencies
+  success_url = '/omni-dashboard'
 
 
 # Create your views here.
@@ -69,7 +69,7 @@ def add_to_favorites(request):
     # cats been added we can save
     new_curr.save()
     print(new_curr)
-  return redirect('index')
+  return redirect('omni_dashboard')
 
 # render user's favorite currencies/watchlist
 @login_required()

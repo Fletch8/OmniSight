@@ -6,7 +6,8 @@
     <p>Watchlist:</p>
     {% for fav in favorites %}
         <p>Symbol: {{ fav.symbol }}</p>
-        <p>Price: ${{ fav.alert_price}}</p>
+        <p>Alert if Price is Above: ${{ fav.alert_price}}</p>
+        <a class="delete btn" href="{% url 'currency_delete' fav.id %}">DELETE Currency</a>
         <hr/>
     {% endfor %}
 {% endblock %}
