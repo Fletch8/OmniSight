@@ -7,7 +7,12 @@
         <p>Symbol: {{ curr.symbol }}</p>
         <p>Price: ${{ curr.price}}</p>
         {% if user.is_authenticated %} 
-        <button class="btn" >Add to Favorites</button>     
+        <form action="{%url 'add_to_favorites'%}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" value="{{curr.symbol}}" name='symbol'>
+            <input type="hidden" value="{{curr.price}}" name='alert_price'>            
+            <button class="btn">Add to Favorites</button>     
+        </form>
         {% endif %}
         <hr/>
     {% endfor %}
