@@ -71,6 +71,15 @@ def add_to_favorites(request):
     print(new_curr)
   return redirect('index')
 
+# render user's favorite currencies/watchlist
+@login_required()
+def favorites_index(request):
+    # we have access to the user request.user
+    # FavCurrencies contains symbol && alert_price
+    print(FavCurrencies)
+    fav_currencies = FavCurrencies.objects.filter(user= request.user)
+    return render(request, 'omni-dashboard.html', { 'favorites': fav_currencies })
+
 def sign_up(request):
   error_message= ''
   if request.method == 'POST':

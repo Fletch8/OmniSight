@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Favorite Currencies</h1>
-<p>your Currencies:</p>
-
+    <h1>-Omni Dashboard-</h1>
+    <hr />
+    <p>Watchlist:</p>
+    {% for fav in favorites %}
+        <p>Symbol: {{ fav.symbol }}</p>
+        <p>Price: ${{ fav.alert_price}}</p>
+        <hr/>
+    {% endfor %}
 {% endblock %}
