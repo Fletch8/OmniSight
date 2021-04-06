@@ -9,6 +9,7 @@ urlpatterns = [
     path('omni-dashboard/', views.favorites_index, name='omni_dashboard'),
     path('add_currency/', views.add_to_favorites, name='add_to_favorites'),
     path('currecy/<int:pk>/delete/', views.FavCurrenciesDelete.as_view(), name='currency_delete'),
+    path('currency/<int:pk>/update/', views.FavCurrenciesUpdate, name='currency_update'),
 ]
 
 # path('cats/', views.cats_index, name='cats'),

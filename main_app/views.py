@@ -26,14 +26,14 @@ from .forms import FavCurrenciesForm
 #   success_url = '/'
 
 # # changed to use custom FavCurrencies_update function with decorator
-# class FavCurrenciesUpdate(UpdateView):
-#   model = FavCurrencies
-#   fields = ['symbol', 'alert_price']
+class FavCurrenciesUpdate(UpdateView):
+  model = FavCurrencies
+  fields = ['alert_price']
 
-#   def form_valid(self, form):
-#     self.object = form.save(commit=False)
-#     self.object.save()
-#     return HttpResponseRedirect('/' + str(self.object.pk))
+  def form_valid(self, form):
+    self.object = form.save(commit=False)
+    self.object.save()
+    return HttpResponseRedirect('/omni-dashboard')
 
 
 class FavCurrenciesDelete(DeleteView):
