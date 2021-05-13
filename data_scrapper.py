@@ -1,6 +1,7 @@
 import requests, os
 import json
 import datetime
+
 def get_ticker_data(data_limit=5):
     response = requests.get("https://api.binance.us/api/v3/ticker/price").json()
     count = 0
@@ -49,7 +50,7 @@ def append_text(info):
         f.write(info)
         print('done')
 
-currency_info = get_ticker_data(45)
+currency_info = get_ticker_data(55)
 x = parse_data(currency_info)
 append_text(x)
 os.system('python3 manage.py loaddata data.json')

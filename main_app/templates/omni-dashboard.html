@@ -8,7 +8,9 @@
         <p>Symbol: {{ fav.symbol }}</p>
         <p>Alert if Price is Above: ${{ fav.alert_price}}</p>
         <a class="delete btn" href="{% url 'currency_delete' fav.id %}">DELETE Currency</a>
-        <a class="update btn" href="{% url 'currency_update' fav.id %}">Update Alert price</a> |
+        <a class="update btn" href="{% url 'currency_update' fav.id %}">Update Alert price</a>
+        <a class="update btn" href="{% url 'currency_checkout_buy' %}">Buy</a> 
+        
         <hr/>
     {% endfor %}
 {% endblock %}
