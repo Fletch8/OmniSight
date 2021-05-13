@@ -52,6 +52,9 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def currencies_buy(request):
+  return render(request, 'currencies_buy.html')
+
 # def add_to_favorites(request):
 #   print(request.POST)
 #   return render(request, 'index.html')
